@@ -1,0 +1,93 @@
+/* App.css */
+
+/* Reset some default styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.calculator {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  width: calc(25% - 5px); /* All buttons have uniform size */
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+input[type="text"]:hover {
+  background-color: #e2e6ea;
+}
+
+/* Display area (first row) */
+form div:first-child input {
+  width: 100%; /* Full width of the form */
+  text-align: right;
+  font-size: 24px; /* Larger text for the display */
+  padding: 15px; /* Increased padding */
+  cursor: default;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Equal button styling */
+input[value="="] {
+  width: calc(50% - 5px); /* Double the size of other buttons */
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+input[value="="]:hover {
+  background-color: #0056b3;
+}
+
+/* Left-most column buttons */
+form div input:first-child {
+  font-weight: bold;
+  background-color: #e9ecef;
+}
+
+/* Hover effect for left-most column buttons */
+form div input:first-child:hover {
+  background-color: #d6d8db;
+}
